@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState } from 'react';
+import { useEffect, useRef } from 'react';
 import { LocateFixed, MapPin } from 'lucide-react';
 import styles from './MapContainer.module.css';
 import type { Location, RouteNode, RouteEdge, RouteSegment } from '../types';
@@ -34,6 +34,18 @@ const EDGE_COLORS: Record<RouteEdge['type'], string> = {
   ramp:   '#1a6fff',
   stairs: '#e53935',
 };
+
+function rampColor(angle?: number): string {
+  if (!angle || angle <= 7) return '#43a047';
+  if (angle <= 15) return '#ff9800';
+  return '#f4511e';
+}
+
+function segmentColor(seg: RouteSegment): string {
+  if (seg.type === 'flat') return '#1a6fff';
+  if (seg.type === 'stairs') return '#e53935';
+  return rampColor(seg.rampAngle);
+}
 
 function calcBearing(from: LatLng, to: LatLng): number {
   const dL = ((to.lng - from.lng) * Math.PI) / 180;
@@ -72,8 +84,6 @@ const MapContainer = ({
   const editorNodeMarkersRef = useRef<{ id: string; marker: any }[]>([]);
   const editorEdgeLinesRef = useRef<{ id: string; polyline: any; arrowMarker: any }[]>([]);
 
-  const [zoomLevel, setZoomLevel] = useState(17);
-
   // 지도 초기화 (1회)
   useEffect(() => {
     const { naver } = window;
@@ -95,7 +105,6 @@ const MapContainer = ({
 
     mapRef.current = map;
     map.fitBounds(bounds, { padding: { top: 50, right: 50, bottom: 50, left: 50 } });
-    naver.maps.Event.addListener(map, 'zoom_changed', () => setZoomLevel(map.getZoom()));
   }, []);
 
   // 클릭 리스너 — isSettingStartPoint / isEditMode 분기
@@ -259,19 +268,6 @@ const MapContainer = ({
     }
   }, [startPoint]);
 
-  // 경사로 각도별 색상: 완만(≤7°)=초록, 보통(8-15°)=주황, 가파름(>15°)=짙은주황
-  function rampColor(angle?: number): string {
-    if (!angle || angle <= 7) return '#43a047';
-    if (angle <= 15) return '#ff9800';
-    return '#f4511e';
-  }
-
-  function segmentColor(seg: RouteSegment): string {
-    if (seg.type === 'flat') return '#1a6fff';
-    if (seg.type === 'stairs') return '#e53935';
-    return rampColor(seg.rampAngle);
-  }
-
   // 경로 폴리라인 + 경사로 방향 화살표 (편집 모드에서는 숨김)
   useEffect(() => {
     const { naver } = window;
@@ -298,8 +294,6 @@ const MapContainer = ({
       if (seg.type === 'ramp' && seg.isUphill !== undefined) {
         const pts = seg.points;
         const mid = pts[Math.floor(pts.length / 2)];
-        const prev2 = pts[Math.floor(pts.length / 2) - 1] ?? pts[0];
-        void calcBearing(prev2, mid);
         const label = seg.isUphill ? '오르막' : '내리막';
         const color = segmentColor(seg);
 
@@ -322,9 +316,6 @@ const MapContainer = ({
     mapRef.current.setCenter(new naver.maps.LatLng(userLocation.lat, userLocation.lng));
     mapRef.current.setZoom(18);
   };
-
-  // 줌 레벨 표시용으로만 사용
-  void zoomLevel;
 
   return (
     <div style={{ position: 'relative', width: '100%', height: '100%' }}>

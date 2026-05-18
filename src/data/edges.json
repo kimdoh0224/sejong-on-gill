@@ -1,0 +1,850 @@
+{
+  "edges": [
+    {
+      "id": "edge_1778910621271",
+      "from": "node_1778910554776",
+      "to": "node_1778910561735",
+      "type": "flat",
+      "accessible": true
+    },
+    {
+      "id": "edge_1778910641541",
+      "from": "node_1778910554776",
+      "to": "node_1778910558276",
+      "type": "ramp",
+      "accessible": true,
+      "rampHighEnd": "to",
+      "rampAngle": 30
+    },
+    {
+      "id": "edge_1778910649004",
+      "from": "node_1778910551034",
+      "to": "node_1778910554776",
+      "type": "flat",
+      "accessible": true
+    },
+    {
+      "id": "edge_1778910664708",
+      "from": "node_1778910554776",
+      "to": "node_1778910599035",
+      "type": "ramp",
+      "accessible": true,
+      "rampHighEnd": "from",
+      "rampAngle": 8
+    },
+    {
+      "id": "edge_1778910702820",
+      "from": "node_1778910561735",
+      "to": "node_1778910686980",
+      "type": "stairs",
+      "accessible": false
+    },
+    {
+      "id": "edge_1778910715882",
+      "from": "node_1778910558276",
+      "to": "node_1778910686980",
+      "type": "flat",
+      "accessible": true
+    },
+    {
+      "id": "edge_1778910739075",
+      "from": "node_1778910686980",
+      "to": "node_1778910675881",
+      "type": "flat",
+      "accessible": true
+    },
+    {
+      "id": "edge_1778910766312",
+      "from": "node_1778910558276",
+      "to": "node_1778910720310",
+      "type": "flat",
+      "accessible": true
+    },
+    {
+      "id": "edge_1778910808403",
+      "from": "node_1778910754492",
+      "to": "node_1778910788072",
+      "type": "ramp",
+      "accessible": true,
+      "rampHighEnd": "from",
+      "rampAngle": 8
+    },
+    {
+      "id": "edge_1778910814995",
+      "from": "node_1778910675881",
+      "to": "node_1778910754492",
+      "type": "flat",
+      "accessible": true
+    },
+    {
+      "id": "edge_1778910835769",
+      "from": "node_1778910754492",
+      "to": "node_1778910823383",
+      "type": "flat",
+      "accessible": true
+    },
+    {
+      "id": "edge_1778910842254",
+      "from": "node_1778910823383",
+      "to": "node_1778910831445",
+      "type": "flat",
+      "accessible": true
+    },
+    {
+      "id": "edge_1778910847120",
+      "from": "node_1778910675881",
+      "to": "node_1778910831445",
+      "type": "flat",
+      "accessible": true
+    },
+    {
+      "id": "edge_1778910852162",
+      "from": "node_1778910823383",
+      "to": "node_1778910826206",
+      "type": "stairs",
+      "accessible": false
+    },
+    {
+      "id": "edge_1778910871974",
+      "from": "node_1778910856555",
+      "to": "node_1778910826206",
+      "type": "flat",
+      "accessible": true
+    },
+    {
+      "id": "edge_1778910929074",
+      "from": "node_1778910720310",
+      "to": "node_1778910788072",
+      "type": "ramp",
+      "accessible": true,
+      "rampHighEnd": "from",
+      "rampAngle": 15
+    },
+    {
+      "id": "edge_1778910972465",
+      "from": "node_1778910968537",
+      "to": "node_1778910788072",
+      "type": "stairs",
+      "accessible": false
+    },
+    {
+      "id": "edge_1778910981815",
+      "from": "node_1778910720310",
+      "to": "node_1778910974534",
+      "type": "flat",
+      "accessible": true
+    },
+    {
+      "id": "edge_1778911018819",
+      "from": "node_1778910974534",
+      "to": "node_1778910992934",
+      "type": "ramp",
+      "accessible": true,
+      "rampHighEnd": "from",
+      "rampAngle": 7
+    },
+    {
+      "id": "edge_1778911065744",
+      "from": "node_1778910992934",
+      "to": "node_1778911049042",
+      "type": "ramp",
+      "accessible": true,
+      "rampHighEnd": "from",
+      "rampAngle": 10
+    },
+    {
+      "id": "edge_1778911099987",
+      "from": "node_1778911081781",
+      "to": "node_1778911035884",
+      "type": "flat",
+      "accessible": true
+    },
+    {
+      "id": "edge_1778911103607",
+      "from": "node_1778910558276",
+      "to": "node_1778911081781",
+      "type": "flat",
+      "accessible": true
+    },
+    {
+      "id": "edge_1778911107881",
+      "from": "node_1778910599035",
+      "to": "node_1778911081781",
+      "type": "stairs",
+      "accessible": false
+    },
+    {
+      "id": "edge_1778911130360",
+      "from": "node_1778911093178",
+      "to": "node_1778910599035",
+      "type": "ramp",
+      "accessible": true,
+      "rampHighEnd": "to",
+      "rampAngle": 3
+    },
+    {
+      "id": "edge_1778911145718",
+      "from": "node_1778910606522",
+      "to": "node_1778911093178",
+      "type": "ramp",
+      "accessible": true,
+      "rampHighEnd": "to",
+      "rampAngle": 4
+    },
+    {
+      "id": "edge_1778911180677",
+      "from": "node_1778911156494",
+      "to": "node_1778910606522",
+      "type": "ramp",
+      "accessible": true,
+      "rampHighEnd": "from",
+      "rampAngle": 30
+    },
+    {
+      "id": "edge_1778911199214",
+      "from": "node_1778911156494",
+      "to": "node_1778911195212",
+      "type": "flat",
+      "accessible": true
+    },
+    {
+      "id": "edge_1778911202802",
+      "from": "node_1778911192879",
+      "to": "node_1778911195212",
+      "type": "flat",
+      "accessible": true
+    },
+    {
+      "id": "edge_1778911213194",
+      "from": "node_1778911191308",
+      "to": "node_1778911192879",
+      "type": "flat",
+      "accessible": true
+    },
+    {
+      "id": "edge_1778911219723",
+      "from": "node_1778911156494",
+      "to": "node_1778911191308",
+      "type": "flat",
+      "accessible": true
+    },
+    {
+      "id": "edge_1778911226039",
+      "from": "node_1778911191308",
+      "to": "node_1778911035884",
+      "type": "stairs",
+      "accessible": false
+    },
+    {
+      "id": "edge_1778911256819",
+      "from": "node_1778911049042",
+      "to": "node_1778911233271",
+      "type": "stairs",
+      "accessible": false
+    },
+    {
+      "id": "edge_1778911261510",
+      "from": "node_1778911195212",
+      "to": "node_1778911233271",
+      "type": "flat",
+      "accessible": true
+    },
+    {
+      "id": "edge_1778911285693",
+      "from": "node_1778911233271",
+      "to": "node_1778911271744",
+      "type": "ramp",
+      "accessible": true,
+      "rampHighEnd": "from",
+      "rampAngle": 10
+    },
+    {
+      "id": "edge_1778911309007",
+      "from": "node_1778911271744",
+      "to": "node_1778911298408",
+      "type": "flat",
+      "accessible": true
+    },
+    {
+      "id": "edge_1778911327989",
+      "from": "node_1778911316625",
+      "to": "node_1778911298408",
+      "type": "flat",
+      "accessible": true
+    },
+    {
+      "id": "edge_1778911340430",
+      "from": "node_1778911316625",
+      "to": "node_1778911320632",
+      "type": "ramp",
+      "accessible": true,
+      "rampHighEnd": "from",
+      "rampAngle": 11
+    },
+    {
+      "id": "edge_1778911376322",
+      "from": "node_1778911350719",
+      "to": "node_1778911363832",
+      "type": "stairs",
+      "accessible": false
+    },
+    {
+      "id": "edge_1778911381239",
+      "from": "node_1778911363832",
+      "to": "node_1778911368883",
+      "type": "flat",
+      "accessible": true
+    },
+    {
+      "id": "edge_1778911399605",
+      "from": "node_1778911298408",
+      "to": "node_1778911394983",
+      "type": "flat",
+      "accessible": true
+    },
+    {
+      "id": "edge_1778911420701",
+      "from": "node_1778911316625",
+      "to": "node_1778911414536",
+      "type": "flat",
+      "accessible": true
+    },
+    {
+      "id": "edge_1778911431484",
+      "from": "node_1778911414536",
+      "to": "node_1778911423878",
+      "type": "stairs",
+      "accessible": false
+    },
+    {
+      "id": "edge_1778911436468",
+      "from": "node_1778911394983",
+      "to": "node_1778911423878",
+      "type": "flat",
+      "accessible": true
+    },
+    {
+      "id": "edge_1778911505451",
+      "from": "node_1778911493879",
+      "to": "node_1778911049042",
+      "type": "flat",
+      "accessible": true
+    },
+    {
+      "id": "edge_1778911512663",
+      "from": "node_1778911493879",
+      "to": "node_1778911470836",
+      "type": "flat",
+      "accessible": true
+    },
+    {
+      "id": "edge_1778911518317",
+      "from": "node_1778911474720",
+      "to": "node_1778911493879",
+      "type": "flat",
+      "accessible": true
+    },
+    {
+      "id": "edge_1778911522059",
+      "from": "node_1778911470836",
+      "to": "node_1778911474720",
+      "type": "flat",
+      "accessible": true
+    },
+    {
+      "id": "edge_1778911529638",
+      "from": "node_1778911493879",
+      "to": "node_1778911479602",
+      "type": "flat",
+      "accessible": true
+    },
+    {
+      "id": "edge_1778911534063",
+      "from": "node_1778911394983",
+      "to": "node_1778911479602",
+      "type": "flat",
+      "accessible": true
+    },
+    {
+      "id": "edge_1778911544401",
+      "from": "node_1778911474720",
+      "to": "node_1778911506337",
+      "type": "flat",
+      "accessible": true
+    },
+    {
+      "id": "edge_1778911590027",
+      "from": "node_1778910593691",
+      "to": "node_1778910584027",
+      "type": "ramp",
+      "accessible": true,
+      "rampHighEnd": "to",
+      "rampAngle": 13
+    },
+    {
+      "id": "edge_1778911645921",
+      "from": "node_1778911622343",
+      "to": "node_1778911626645",
+      "type": "flat",
+      "accessible": true
+    },
+    {
+      "id": "edge_1778911649783",
+      "from": "node_1778910561735",
+      "to": "node_1778911622343",
+      "type": "flat",
+      "accessible": true
+    },
+    {
+      "id": "edge_1778911654771",
+      "from": "node_1778910551034",
+      "to": "node_1778911626645",
+      "type": "flat",
+      "accessible": true
+    },
+    {
+      "id": "edge_1778911657971",
+      "from": "node_1778910551034",
+      "to": "node_1778911622343",
+      "type": "flat",
+      "accessible": true
+    },
+    {
+      "id": "edge_1778911702750",
+      "from": "node_1778910593691",
+      "to": "node_1778911682257",
+      "type": "flat",
+      "accessible": true
+    },
+    {
+      "id": "edge_1778911740476",
+      "from": "node_1778911423878",
+      "to": "node_1778911696378",
+      "type": "ramp",
+      "accessible": true,
+      "rampHighEnd": "from",
+      "rampAngle": 10
+    },
+    {
+      "id": "edge_1778942489711",
+      "from": "node_1778911696378",
+      "to": "node_1778942464179",
+      "type": "flat",
+      "accessible": true
+    },
+    {
+      "id": "edge_1778942518689",
+      "from": "node_1778911696378",
+      "to": "node_1778942494150",
+      "type": "ramp",
+      "accessible": true,
+      "rampHighEnd": "from",
+      "rampAngle": 5
+    },
+    {
+      "id": "edge_1778942606710",
+      "from": "node_1778911423878",
+      "to": "node_1778942472809",
+      "type": "flat",
+      "accessible": true
+    },
+    {
+      "id": "edge_1778942627439",
+      "from": "node_1778942612041",
+      "to": "node_1778942472809",
+      "type": "flat",
+      "accessible": true
+    },
+    {
+      "id": "edge_1778942631326",
+      "from": "node_1778911506337",
+      "to": "node_1778942612041",
+      "type": "flat",
+      "accessible": true
+    },
+    {
+      "id": "edge_1778942634884",
+      "from": "node_1778942612041",
+      "to": "node_1778911479602",
+      "type": "flat",
+      "accessible": true
+    },
+    {
+      "id": "edge_1778942758742",
+      "from": "node_1778942472809",
+      "to": "node_1778942652426",
+      "type": "flat",
+      "accessible": true
+    },
+    {
+      "id": "edge_1778942765930",
+      "from": "node_1778911506337",
+      "to": "node_1778942662730",
+      "type": "flat",
+      "accessible": true
+    },
+    {
+      "id": "edge_1778942780398",
+      "from": "node_1778942662730",
+      "to": "node_1778942652426",
+      "type": "ramp",
+      "accessible": true,
+      "rampHighEnd": "to",
+      "rampAngle": 6
+    },
+    {
+      "id": "edge_1778942790489",
+      "from": "node_1778942680616",
+      "to": "node_1778942670007",
+      "type": "ramp",
+      "accessible": true,
+      "rampHighEnd": "to",
+      "rampAngle": 6
+    },
+    {
+      "id": "edge_1778942794038",
+      "from": "node_1778942662730",
+      "to": "node_1778942680616",
+      "type": "flat",
+      "accessible": true
+    },
+    {
+      "id": "edge_1778942800729",
+      "from": "node_1778942652426",
+      "to": "node_1778942656373",
+      "type": "flat",
+      "accessible": true
+    },
+    {
+      "id": "edge_1778942805263",
+      "from": "node_1778942652426",
+      "to": "node_1778942670007",
+      "type": "flat",
+      "accessible": true
+    },
+    {
+      "id": "edge_1778942819146",
+      "from": "node_1778942656373",
+      "to": "node_1778942711935",
+      "type": "flat",
+      "accessible": true
+    },
+    {
+      "id": "edge_1778942825346",
+      "from": "node_1778942670007",
+      "to": "node_1778942686050",
+      "type": "flat",
+      "accessible": true
+    },
+    {
+      "id": "edge_1778942829997",
+      "from": "node_1778942686050",
+      "to": "node_1778942690628",
+      "type": "flat",
+      "accessible": true
+    },
+    {
+      "id": "edge_1778942846714",
+      "from": "node_1778942838000",
+      "to": "node_1778942690628",
+      "type": "stairs",
+      "accessible": false
+    },
+    {
+      "id": "edge_1778942858163",
+      "from": "node_1778942690628",
+      "to": "node_1778942711935",
+      "type": "flat",
+      "accessible": true
+    },
+    {
+      "id": "edge_1778942863292",
+      "from": "node_1778942686050",
+      "to": "node_1778942711935",
+      "type": "flat",
+      "accessible": true
+    },
+    {
+      "id": "edge_1778942903988",
+      "from": "node_1778942838000",
+      "to": "node_1778942876187",
+      "type": "flat",
+      "accessible": true
+    },
+    {
+      "id": "edge_1778942922513",
+      "from": "node_1778942876187",
+      "to": "node_1778942878618",
+      "type": "flat",
+      "accessible": true
+    },
+    {
+      "id": "edge_1778942935446",
+      "from": "node_1778942878618",
+      "to": "node_1778942882666",
+      "type": "flat",
+      "accessible": true
+    },
+    {
+      "id": "edge_1778942968929",
+      "from": "node_1778942849550",
+      "to": "node_1778942838000",
+      "type": "flat",
+      "accessible": true
+    },
+    {
+      "id": "edge_1778942977747",
+      "from": "node_1778942524524",
+      "to": "node_1778942849550",
+      "type": "flat",
+      "accessible": true
+    },
+    {
+      "id": "edge_1778942981796",
+      "from": "node_1778942680616",
+      "to": "node_1778942524524",
+      "type": "flat",
+      "accessible": true
+    },
+    {
+      "id": "edge_1778943000379",
+      "from": "node_1778942994915",
+      "to": "node_1778942524524",
+      "type": "flat",
+      "accessible": true
+    },
+    {
+      "id": "edge_1778943013487",
+      "from": "node_1778942991583",
+      "to": "node_1778942994915",
+      "type": "flat",
+      "accessible": true
+    },
+    {
+      "id": "edge_1778943055237",
+      "from": "node_1778943038749",
+      "to": "node_1778943039953",
+      "type": "flat",
+      "accessible": true
+    },
+    {
+      "id": "edge_1778943068145",
+      "from": "node_1778943036324",
+      "to": "node_1778943038749",
+      "type": "flat",
+      "accessible": true
+    },
+    {
+      "id": "edge_1778943099645",
+      "from": "node_1778943033465",
+      "to": "node_1778943036324",
+      "type": "flat",
+      "accessible": true
+    },
+    {
+      "id": "edge_1778943106258",
+      "from": "node_1778943033465",
+      "to": "node_1778943031982",
+      "type": "flat",
+      "accessible": true
+    },
+    {
+      "id": "edge_1778943110383",
+      "from": "node_1778942991583",
+      "to": "node_1778943031982",
+      "type": "flat",
+      "accessible": true
+    },
+    {
+      "id": "edge_1778943121878",
+      "from": "node_1778943031982",
+      "to": "node_1778943114534",
+      "type": "flat",
+      "accessible": true
+    },
+    {
+      "id": "edge_1778943236203",
+      "from": "node_1778911093178",
+      "to": "node_1778943228078",
+      "type": "ramp",
+      "accessible": true,
+      "rampHighEnd": "from",
+      "rampAngle": 8
+    },
+    {
+      "id": "edge_1778943297720",
+      "from": "node_1778910606522",
+      "to": "node_1778943275360",
+      "type": "flat",
+      "accessible": true
+    },
+    {
+      "id": "edge_1778943301886",
+      "from": "node_1778943275360",
+      "to": "node_1778911271744",
+      "type": "flat",
+      "accessible": true
+    },
+    {
+      "id": "edge_1778943307611",
+      "from": "node_1778943275360",
+      "to": "node_1778943228078",
+      "type": "ramp",
+      "accessible": true,
+      "rampHighEnd": "from",
+      "rampAngle": 5
+    },
+    {
+      "id": "edge_1778943326148",
+      "from": "node_1778943228078",
+      "to": "node_1778943281124",
+      "type": "flat",
+      "accessible": true
+    },
+    {
+      "id": "edge_1778943351544",
+      "from": "node_1778911093178",
+      "to": "node_1778943281124",
+      "type": "ramp",
+      "accessible": true,
+      "rampHighEnd": "from",
+      "rampAngle": 5
+    },
+    {
+      "id": "edge_1778943361599",
+      "from": "node_1778943281124",
+      "to": "node_1778910593691",
+      "type": "ramp",
+      "accessible": true,
+      "rampHighEnd": "from",
+      "rampAngle": 8
+    },
+    {
+      "id": "edge_1778943373648",
+      "from": "node_1778911682257",
+      "to": "node_1778943252452",
+      "type": "flat",
+      "accessible": true
+    },
+    {
+      "id": "edge_1778943377714",
+      "from": "node_1778943252452",
+      "to": "node_1778911271744",
+      "type": "flat",
+      "accessible": true
+    },
+    {
+      "id": "edge_1778943463019",
+      "from": "node_1778943449542",
+      "to": "node_1778910584027",
+      "type": "flat",
+      "accessible": true
+    },
+    {
+      "id": "edge_1778943476936",
+      "from": "node_1778943449542",
+      "to": "node_1778943451118",
+      "type": "flat",
+      "accessible": true
+    },
+    {
+      "id": "edge_1778943496777",
+      "from": "node_1778943451118",
+      "to": "node_1778910551034",
+      "type": "flat",
+      "accessible": true
+    },
+    {
+      "id": "edge_1778943539610",
+      "from": "node_1778910974534",
+      "to": "node_1778943453731",
+      "type": "flat",
+      "accessible": true
+    },
+    {
+      "id": "edge_1778943546624",
+      "from": "node_1778943453731",
+      "to": "node_1778911035884",
+      "type": "flat",
+      "accessible": true
+    },
+    {
+      "id": "edge_1778943716222",
+      "from": "node_1778943702513",
+      "to": "node_1778911622343",
+      "type": "flat",
+      "accessible": true
+    },
+    {
+      "id": "edge_1778943720063",
+      "from": "node_1778943702513",
+      "to": "node_1778911626645",
+      "type": "flat",
+      "accessible": true
+    },
+    {
+      "id": "edge_1778943726238",
+      "from": "node_1778943702513",
+      "to": "node_1778910551034",
+      "type": "flat",
+      "accessible": true
+    },
+    {
+      "id": "edge_1778945100588",
+      "from": "node_1778911350719",
+      "to": "node_1778945092297",
+      "type": "ramp",
+      "accessible": true,
+      "rampHighEnd": "to",
+      "rampAngle": 4
+    },
+    {
+      "id": "edge_1778945125072",
+      "from": "node_1778945089278",
+      "to": "node_1778945092297",
+      "type": "flat",
+      "accessible": true
+    },
+    {
+      "id": "edge_1778945154326",
+      "from": "node_1778910551034",
+      "to": "node_1778945089278",
+      "type": "ramp",
+      "accessible": true,
+      "rampHighEnd": "from",
+      "rampAngle": 14
+    },
+    {
+      "id": "edge_1778945170489",
+      "from": "node_1778911626645",
+      "to": "node_1778945089278",
+      "type": "ramp",
+      "accessible": true,
+      "rampHighEnd": "from",
+      "rampAngle": 5
+    },
+    {
+      "id": "edge_1778945216879",
+      "from": "node_1778911632918",
+      "to": "node_1778945196282",
+      "type": "flat",
+      "accessible": true
+    },
+    {
+      "id": "edge_1778945222509",
+      "from": "node_1778945196282",
+      "to": "node_1778911626645",
+      "type": "flat",
+      "accessible": true
+    },
+    {
+      "id": "edge_1778945232584",
+      "from": "node_1778910856555",
+      "to": "node_1778945196282",
+      "type": "ramp",
+      "accessible": true,
+      "rampHighEnd": "to",
+      "rampAngle": 15
+    }
+  ]
+}

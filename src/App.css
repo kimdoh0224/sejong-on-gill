@@ -69,6 +69,13 @@ body {
   gap: 12px;
 }
 
+.app-logo {
+  height: 36px;
+  width: auto;
+  display: block;
+  flex-shrink: 0;
+}
+
 .app-title-group {
   display: flex;
   flex-direction: column;

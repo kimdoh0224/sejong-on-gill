@@ -1,0 +1,579 @@
+{
+  "locations": [
+    {
+      "id": 1,
+      "name": "집현관",
+      "category": "BUILDING",
+      "lat": 37.5490053,
+      "lng": 127.0737571,
+      "facilities": {
+        "ramp": {
+          "exists": true,
+          "description": "정문 우측 경사로 설치"
+        },
+        "elevator": {
+          "exists": true,
+          "description": "전층 엘리베이터 운영 (4대)"
+        },
+        "toilet": {
+          "exists": true,
+          "description": "1층 장애인 전용 화장실"
+        },
+        "parking": {
+          "exists": true,
+          "description": "본관 앞 전용 주차구역"
+        }
+      }
+    },
+    {
+      "id": 2,
+      "name": "대양홀",
+      "category": "BUILDING",
+      "lat": 37.5486941,
+      "lng": 127.0744273,
+      "facilities": {
+        "ramp": {
+          "exists": true,
+          "description": "정문 좌측 경사로 이용 가능"
+        },
+        "elevator": {
+          "exists": false,
+          "description": ""
+        },
+        "toilet": {
+          "exists": false,
+          "description": ""
+        },
+        "parking": {
+          "exists": false,
+          "description": ""
+        }
+      }
+    },
+    {
+      "id": 3,
+      "name": "광개토관",
+      "category": "BUILDING",
+      "lat": 37.5503786,
+      "lng": 127.0732086,
+      "facilities": {
+        "ramp": {
+          "exists": true,
+          "description": "정문 평탄화 및 경사로 설치"
+        },
+        "elevator": {
+          "exists": true,
+          "description": "전 층 엘리베이터 운행 (6대)"
+        },
+        "toilet": {
+          "exists": true,
+          "description": "각 층 장애인 화장실 보유"
+        },
+        "parking": {
+          "exists": true,
+          "description": "지하 주차장 내 장애인 전용 구역"
+        }
+      }
+    },
+    {
+      "id": 4,
+      "name": "군자관",
+      "category": "BUILDING",
+      "lat": 37.5496054,
+      "lng": 127.073652,
+      "facilities": {
+        "ramp": {
+          "exists": true,
+          "description": "모든 입구 경사로 존재"
+        },
+        "elevator": {
+          "exists": true,
+          "description": "전층 엘리베이터 운영 (1대)"
+        },
+        "toilet": {
+          "exists": false,
+          "description": ""
+        },
+        "parking": {
+          "exists": false,
+          "description": ""
+        }
+      }
+    },
+    {
+      "id": 5,
+      "name": "학생회관",
+      "category": "BUILDING",
+      "lat": 37.5497565,
+      "lng": 127.0752451,
+      "facilities": {
+        "ramp": {
+          "exists": true,
+          "description": "모든 입구 경사로 존재"
+        },
+        "elevator": {
+          "exists": true,
+          "description": "전층 엘리베이터 운영 (2대)"
+        },
+        "toilet": {
+          "exists": false,
+          "description": ""
+        },
+        "parking": {
+          "exists": false,
+          "description": ""
+        }
+      }
+    },
+    {
+      "id": 6,
+      "name": "충무관",
+      "category": "BUILDING",
+      "lat": 37.5523117,
+      "lng": 127.0739791,
+      "facilities": {
+        "ramp": {
+          "exists": true,
+          "description": "모든 입구 경사로 존재"
+        },
+        "elevator": {
+          "exists": true,
+          "description": "전층 엘리베이터 운영 (4대)"
+        },
+        "toilet": {
+          "exists": false,
+          "description": ""
+        },
+        "parking": {
+          "exists": false,
+          "description": ""
+        }
+      }
+    },
+    {
+      "id": 7,
+      "name": "영실관",
+      "category": "BUILDING",
+      "lat": 37.5523994,
+      "lng": 127.0733104,
+      "facilities": {
+        "ramp": {
+          "exists": false,
+          "description": ""
+        },
+        "elevator": {
+          "exists": false,
+          "description": ""
+        },
+        "toilet": {
+          "exists": false,
+          "description": ""
+        },
+        "parking": {
+          "exists": false,
+          "description": ""
+        }
+      }
+    },
+    {
+      "id": 8,
+      "name": "율곡관",
+      "category": "BUILDING",
+      "lat": 37.5518341,
+      "lng": 127.0740711,
+      "facilities": {
+        "ramp": {
+          "exists": false,
+          "description": ""
+        },
+        "elevator": {
+          "exists": false,
+          "description": ""
+        },
+        "toilet": {
+          "exists": false,
+          "description": ""
+        },
+        "parking": {
+          "exists": false,
+          "description": ""
+        }
+      }
+    },
+    {
+      "id": 9,
+      "name": "다산관",
+      "category": "BUILDING",
+      "lat": 37.5525954,
+      "lng": 127.0741566,
+      "facilities": {
+        "ramp": {
+          "exists": false,
+          "description": ""
+        },
+        "elevator": {
+          "exists": false,
+          "description": ""
+        },
+        "toilet": {
+          "exists": false,
+          "description": ""
+        },
+        "parking": {
+          "exists": false,
+          "description": ""
+        }
+      }
+    },
+    {
+      "id": 10,
+      "name": "학술정보원",
+      "category": "BUILDING",
+      "lat": 37.5515721,
+      "lng": 127.0742505,
+      "facilities": {
+        "ramp": {
+          "exists": true,
+          "description": "입구 좌측에 경사로 존재"
+        },
+        "elevator": {
+          "exists": true,
+          "description": "전층 엘리베이터 운영 (2대)"
+        },
+        "toilet": {
+          "exists": false,
+          "description": ""
+        },
+        "parking": {
+          "exists": false,
+          "description": ""
+        }
+      }
+    },
+    {
+      "id": 11,
+      "name": "우정당",
+      "category": "BUILDING",
+      "lat": 37.551896,
+      "lng": 127.0746769,
+      "facilities": {
+        "ramp": {
+          "exists": false,
+          "description": ""
+        },
+        "elevator": {
+          "exists": false,
+          "description": ""
+        },
+        "toilet": {
+          "exists": false,
+          "description": ""
+        },
+        "parking": {
+          "exists": false,
+          "description": ""
+        }
+      }
+    },
+    {
+      "id": 12,
+      "name": "대양AI센터",
+      "category": "BUILDING",
+      "lat": 37.5510203,
+      "lng": 127.0753793,
+      "facilities": {
+        "ramp": {
+          "exists": true,
+          "description": "정문 좌측 B1로 이어지는 경사로 존재, 1F 잔디밭 방향 입구"
+        },
+        "elevator": {
+          "exists": true,
+          "description": "전층 엘리베이터 운영 (6대)"
+        },
+        "toilet": {
+          "exists": false,
+          "description": ""
+        },
+        "parking": {
+          "exists": false,
+          "description": ""
+        }
+      }
+    },
+    {
+      "id": 13,
+      "name": "진관홀",
+      "category": "BUILDING",
+      "lat": 37.5509349,
+      "lng": 127.0732814,
+      "facilities": {
+        "ramp": {
+          "exists": true,
+          "description": "모든 입구 경사로 존재"
+        },
+        "elevator": {
+          "exists": false,
+          "description": ""
+        },
+        "toilet": {
+          "exists": false,
+          "description": ""
+        },
+        "parking": {
+          "exists": false,
+          "description": ""
+        }
+      }
+    },
+    {
+      "id": 14,
+      "name": "용덕관",
+      "category": "BUILDING",
+      "lat": 37.5513413,
+      "lng": 127.0733163,
+      "facilities": {
+        "ramp": {
+          "exists": false,
+          "description": ""
+        },
+        "elevator": {
+          "exists": false,
+          "description": ""
+        },
+        "toilet": {
+          "exists": false,
+          "description": ""
+        },
+        "parking": {
+          "exists": false,
+          "description": ""
+        }
+      }
+    },
+    {
+      "id": 15,
+      "name": "새날관",
+      "category": "BUILDING",
+      "lat": 37.5533149,
+      "lng": 127.0726246,
+      "facilities": {
+        "ramp": {
+          "exists": false,
+          "description": ""
+        },
+        "elevator": {
+          "exists": false,
+          "description": ""
+        },
+        "toilet": {
+          "exists": false,
+          "description": ""
+        },
+        "parking": {
+          "exists": false,
+          "description": ""
+        }
+      }
+    },
+    {
+      "id": 16,
+      "name": "박물관",
+      "category": "BUILDING",
+      "lat": 37.5514639,
+      "lng": 127.075225,
+      "facilities": {
+        "ramp": {
+          "exists": false,
+          "description": ""
+        },
+        "elevator": {
+          "exists": false,
+          "description": ""
+        },
+        "toilet": {
+          "exists": false,
+          "description": ""
+        },
+        "parking": {
+          "exists": false,
+          "description": ""
+        }
+      }
+    },
+    {
+      "id": 17,
+      "name": "이당관",
+      "category": "BUILDING",
+      "lat": 37.5505455,
+      "lng": 127.0728961,
+      "facilities": {
+        "ramp": {
+          "exists": false,
+          "description": ""
+        },
+        "elevator": {
+          "exists": false,
+          "description": ""
+        },
+        "toilet": {
+          "exists": false,
+          "description": ""
+        },
+        "parking": {
+          "exists": false,
+          "description": ""
+        }
+      }
+    },
+    {
+      "id": 18,
+      "name": "모짜르트홀",
+      "category": "BUILDING",
+      "lat": 37.5483084,
+      "lng": 127.0739985,
+      "facilities": {
+        "ramp": {
+          "exists": false,
+          "description": ""
+        },
+        "elevator": {
+          "exists": false,
+          "description": ""
+        },
+        "toilet": {
+          "exists": false,
+          "description": ""
+        },
+        "parking": {
+          "exists": false,
+          "description": ""
+        }
+      }
+    },
+    {
+      "id": 19,
+      "name": "세종관",
+      "category": "BUILDING",
+      "lat": 37.5500662,
+      "lng": 127.0744008,
+      "facilities": {
+        "ramp": {
+          "exists": false,
+          "description": ""
+        },
+        "elevator": {
+          "exists": false,
+          "description": ""
+        },
+        "toilet": {
+          "exists": false,
+          "description": ""
+        },
+        "parking": {
+          "exists": false,
+          "description": ""
+        }
+      }
+    },
+    {
+      "id": 20,
+      "name": "무방관",
+      "category": "BUILDING",
+      "lat": 37.5537674,
+      "lng": 127.0729661,
+      "facilities": {
+        "ramp": {
+          "exists": false,
+          "description": ""
+        },
+        "elevator": {
+          "exists": false,
+          "description": ""
+        },
+        "toilet": {
+          "exists": false,
+          "description": ""
+        },
+        "parking": {
+          "exists": false,
+          "description": ""
+        }
+      }
+    },
+    {
+      "id": 21,
+      "name": "호텔스쿨",
+      "category": "BUILDING",
+      "lat": 37.5532574,
+      "lng": 127.073366,
+      "facilities": {
+        "ramp": {
+          "exists": false,
+          "description": ""
+        },
+        "elevator": {
+          "exists": false,
+          "description": ""
+        },
+        "toilet": {
+          "exists": false,
+          "description": ""
+        },
+        "parking": {
+          "exists": false,
+          "description": ""
+        }
+      }
+    },
+    {
+      "id": 22,
+      "name": "애지헌",
+      "category": "BUILDING",
+      "lat": 37.5508525,
+      "lng": 127.0739132,
+      "facilities": {
+        "ramp": {
+          "exists": false,
+          "description": ""
+        },
+        "elevator": {
+          "exists": false,
+          "description": ""
+        },
+        "toilet": {
+          "exists": false,
+          "description": ""
+        },
+        "parking": {
+          "exists": false,
+          "description": ""
+        }
+      }
+    },
+    {
+      "id": 23,
+      "name": "김원관",
+      "category": "BUILDING",
+      "lat": 37.5481774,
+      "lng": 127.0733526,
+      "facilities": {
+        "ramp": {
+          "exists": false,
+          "description": ""
+        },
+        "elevator": {
+          "exists": false,
+          "description": ""
+        },
+        "toilet": {
+          "exists": false,
+          "description": ""
+        },
+        "parking": {
+          "exists": false,
+          "description": ""
+        }
+      }
+    }
+  ]
+}

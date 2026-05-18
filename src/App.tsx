@@ -1,4 +1,4 @@
-import { useState, useCallback, useEffect } from 'react';
+import { useState, useCallback, useEffect, useRef, useMemo } from 'react';
 import MapContainer from './components/MapContainer';
 import OverlayUI from './components/OverlayUI';
 import DetailPanel from './components/DetailPanel';
@@ -8,11 +8,16 @@ import RouteInfoPanel from './components/RouteInfoPanel';
 import DevAuthModal from './components/DevAuthModal';
 import { useBarrierFreeData } from './hooks/useBarrierFreeData';
 import { findRoute } from './services/routeFinder';
+import { haversine } from './utils/haversine';
 import type { Location, RouteNode, RouteEdge, RouteSegment } from './types';
 import './App.css';
 
 type LatLng = { lat: number; lng: number };
 const GRAPH_STORAGE_KEY = 'sejong-route-graph-v2';
+
+// 세종대학교 캠퍼스 기준점 & 허용 반경
+const CAMPUS_CENTER: LatLng = { lat: 37.5500, lng: 127.0745 };
+const CAMPUS_RADIUS_M = 800;
 
 function loadSavedGraph(): { nodes: RouteNode[]; edges: RouteEdge[] } | null {
   try {
@@ -28,34 +33,26 @@ function App() {
     useBarrierFreeData();
 
   // ── 경로 그래프 (로컬스토리지에서 복원) ──────────────────
-  const saved = loadSavedGraph();
   const [routeNodes, setRouteNodesRaw] = useState<RouteNode[]>(
-    saved?.nodes ?? (defaultNodes as RouteNode[])
+    () => (loadSavedGraph()?.nodes ?? defaultNodes) as RouteNode[]
   );
   const [routeEdges, setRouteEdgesRaw] = useState<RouteEdge[]>(
-    saved?.edges ?? (defaultEdges as RouteEdge[])
+    () => (loadSavedGraph()?.edges ?? defaultEdges) as RouteEdge[]
   );
 
+  const latestNodesRef = useRef(routeNodes);
+  latestNodesRef.current = routeNodes;
+  const latestEdgesRef = useRef(routeEdges);
+  latestEdgesRef.current = routeEdges;
+
   const setRouteNodes = useCallback((nodes: RouteNode[]) => {
-    setRouteNodesRaw((prevNodes) => {
-      void prevNodes;
-      setRouteEdgesRaw((prevEdges) => {
-        localStorage.setItem(GRAPH_STORAGE_KEY, JSON.stringify({ nodes, edges: prevEdges }));
-        return prevEdges;
-      });
-      return nodes;
-    });
+    setRouteNodesRaw(nodes);
+    localStorage.setItem(GRAPH_STORAGE_KEY, JSON.stringify({ nodes, edges: latestEdgesRef.current }));
   }, []);
 
   const setRouteEdges = useCallback((edges: RouteEdge[]) => {
-    setRouteEdgesRaw((prevEdges) => {
-      void prevEdges;
-      setRouteNodesRaw((prevNodes) => {
-        localStorage.setItem(GRAPH_STORAGE_KEY, JSON.stringify({ nodes: prevNodes, edges }));
-        return prevNodes;
-      });
-      return edges;
-    });
+    setRouteEdgesRaw(edges);
+    localStorage.setItem(GRAPH_STORAGE_KEY, JSON.stringify({ nodes: latestNodesRef.current, edges }));
   }, []);
 
   // ── 개발자 인증 상태 ──────────────────────────────────────
@@ -72,6 +69,7 @@ function App() {
   const [selectedLocation, setSelectedLocation] = useState<Location | null>(null);
   const [startPoint, setStartPoint] = useState<LatLng | null>(null);
   const [userLocation, setUserLocation] = useState<LatLng | null>(null);
+  const [gpsError, setGpsError] = useState(false);
   const [isSettingStartPoint, setIsSettingStartPoint] = useState(false);
   const [routePath, setRoutePath] = useState<RouteSegment[] | null>(null);
   const [pendingDestination, setPendingDestination] = useState<Location | null>(null);
@@ -79,13 +77,19 @@ function App() {
 
   // GPS 취득 (1회)
   useEffect(() => {
-    if (!navigator.geolocation) return;
+    if (!navigator.geolocation) {
+      setGpsError(true);
+      return;
+    }
     navigator.geolocation.getCurrentPosition(
       (pos) => setUserLocation({ lat: pos.coords.latitude, lng: pos.coords.longitude }),
-      () => {},
+      () => setGpsError(true),
       { enableHighAccuracy: true, timeout: 10000 }
     );
   }, []);
+
+  const isOutsideCampus =
+    userLocation !== null && haversine(userLocation, CAMPUS_CENTER) > CAMPUS_RADIUS_M;
 
   // ── 편집 모드 핸들러 ──────────────────────────────────────
 
@@ -199,7 +203,7 @@ function App() {
   }, [defaultNodes, defaultEdges]);
 
   // ── EdgePanel용 데이터 ────────────────────────────────────
-  const nodeMap = new Map(routeNodes.map((n) => [n.id, n]));
+  const nodeMap = useMemo(() => new Map(routeNodes.map((n) => [n.id, n])), [routeNodes]);
   const edgePanelFrom = pendingEdge
     ? nodeMap.get(pendingEdge.from)
     : selectedEdgeId
@@ -278,6 +282,7 @@ function App() {
       )}
       <header className="app-header">
         <div className="app-header-left">
+          <img src="/logo.png" alt="세종온길 로고" className="app-logo" />
           <div className="app-title-group">
             <div className="app-title">세종온길</div>
             <div className="app-subtitle">배리어프리 길찾기</div>
@@ -387,6 +392,8 @@ function App() {
         <DepartureSelector
           destinationName={pendingDestination.name}
           hasUserLocation={userLocation !== null}
+          gpsError={gpsError}
+          isOutsideCampus={isOutsideCampus}
           onSelectCurrentLocation={onSelectCurrentLocation}
           onSelectMapPoint={onSelectMapPoint}
           onCancel={onCancelDeparture}

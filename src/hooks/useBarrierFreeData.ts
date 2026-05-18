@@ -1,8 +1,16 @@
 import { useState, useMemo } from 'react';
-import db from '../data/db.json';
-import type { BarrierFreeData } from '../types';
+import locationsData from '../data/locations.json';
+import nodesData from '../data/nodes.json';
+import edgesData from '../data/edges.json';
+import type { BarrierFreeData, Facilities } from '../types';
 
-const data = db as unknown as BarrierFreeData;
+const data = {
+  locations: locationsData.locations,
+  routeGraph: {
+    nodes: nodesData.nodes,
+    edges: edgesData.edges,
+  },
+} as unknown as BarrierFreeData;
 
 export const useBarrierFreeData = () => {
   const [activeFilters, setActiveFilters] = useState<string[]>([]);
@@ -10,7 +18,7 @@ export const useBarrierFreeData = () => {
   const filteredLocations = useMemo(() => {
     return data.locations.filter((location) =>
       activeFilters.every((filter) => {
-        const facility = (location.facilities as any)[filter];
+        const facility = location.facilities[filter as keyof Facilities];
         return facility?.exists;
       })
     );
