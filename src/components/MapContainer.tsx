@@ -84,27 +84,41 @@ const MapContainer = ({
   const editorNodeMarkersRef = useRef<{ id: string; marker: any }[]>([]);
   const editorEdgeLinesRef = useRef<{ id: string; polyline: any; arrowMarker: any }[]>([]);
 
-  // 지도 초기화 (1회)
+  // 지도 초기화 (1회) — naver SDK 로딩 완료 대기 후 실행
   useEffect(() => {
-    const { naver } = window;
-    if (!mapElement.current || !naver?.maps || mapRef.current) return;
+    const initMap = () => {
+      const { naver } = window;
+      if (!mapElement.current || !naver?.maps || mapRef.current) return;
 
-    const bounds = new naver.maps.LatLngBounds(
-      new naver.maps.LatLng(SEJONG_BOUNDS_SW.lat, SEJONG_BOUNDS_SW.lng),
-      new naver.maps.LatLng(SEJONG_BOUNDS_NE.lat, SEJONG_BOUNDS_NE.lng)
-    );
+      const bounds = new naver.maps.LatLngBounds(
+        new naver.maps.LatLng(SEJONG_BOUNDS_SW.lat, SEJONG_BOUNDS_SW.lng),
+        new naver.maps.LatLng(SEJONG_BOUNDS_NE.lat, SEJONG_BOUNDS_NE.lng)
+      );
 
-    const map = new naver.maps.Map(mapElement.current, {
-      center: new naver.maps.LatLng(SEJONG_CENTER.lat, SEJONG_CENTER.lng),
-      zoom: 17,
-      minZoom: 15,
-      maxZoom: 19,
-      maxBounds: bounds,
-      zoomControl: false,
-    });
+      const map = new naver.maps.Map(mapElement.current, {
+        center: new naver.maps.LatLng(SEJONG_CENTER.lat, SEJONG_CENTER.lng),
+        zoom: 17,
+        minZoom: 15,
+        maxZoom: 19,
+        maxBounds: bounds,
+        zoomControl: false,
+      });
 
-    mapRef.current = map;
-    map.fitBounds(bounds, { padding: { top: 50, right: 50, bottom: 50, left: 50 } });
+      mapRef.current = map;
+      map.fitBounds(bounds, { padding: { top: 50, right: 50, bottom: 50, left: 50 } });
+    };
+
+    if ((window as any).naver?.maps) {
+      initMap();
+    } else {
+      const interval = setInterval(() => {
+        if ((window as any).naver?.maps) {
+          clearInterval(interval);
+          initMap();
+        }
+      }, 100);
+      return () => clearInterval(interval);
+    }
   }, []);
 
   // 클릭 리스너 — isSettingStartPoint / isEditMode 분기
